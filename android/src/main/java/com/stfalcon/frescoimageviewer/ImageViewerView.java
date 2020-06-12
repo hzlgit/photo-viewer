@@ -258,7 +258,8 @@ class ImageViewerView extends RelativeLayout
 
     private void onClick(MotionEvent event, boolean isOverlayWasClicked) {
         if (overlayView != null && !isOverlayWasClicked) {
-            AnimationUtils.animateVisibility(overlayView);
+            // AnimationUtils.animateVisibility(overlayView);
+            onDismiss();
             super.dispatchTouchEvent(event);
         }
     }
